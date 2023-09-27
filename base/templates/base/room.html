@@ -1,8 +1,9 @@
-{% extends 'main.html' %} {% block content %} {% if context %}
-
-<h1>{{room}} Room</h1>
+{% extends 'main.html' %} {% block content %} {% if room == "No such room" %}
+<h1>{{room}}</h1>
 
 {% else %}
-<h1>{{room}}</h1>
+
+<h1>{{room}} Room</h1>
+<p>{{room.description}}</p>
 
 {% endif %} {% endblock content %}
